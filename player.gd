@@ -23,5 +23,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		$AnimatedSprite2D.stop()  
+		
+	print(global_position.y)
+	if global_position.y > 100:
+		var spawn = get_parent().get_child(2).get_child(0).get_node("SpawnPoint")
+		if spawn:
+			global_position = spawn.global_position
 
 	move_and_slide()
