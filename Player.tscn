@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbdx7p46w74iw"]
+[gd_scene load_steps=10 format=3 uid="uid://bbdx7p46w74iw"]
 
 [ext_resource type="Script" uid="uid://dxwteod6dxva6" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://dukkk0mvxfjsw" path="res://Assets/Backgrounds/sky.png" id="2_kne1u"]
 [ext_resource type="Texture2D" uid="uid://yevns311qfnb" path="res://Assets/Triste/Hands/spr_Triste_walk_strip4.png" id="2_kpjcp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kne1u"]
@@ -46,11 +47,17 @@ size = Vector2(22, 34)
 script = ExtResource("1_kpjcp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+scale = Vector2(3.04661, 3.04661)
+texture = ExtResource("2_kne1u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dtqjt")
 animation = &"walk"
 frame_progress = 0.928068
+speed_scale = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kpjcp")
