@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var boost_strength: float = 150.0  # how high it launches
+@export var boost_strength: float = 800.0  # how high it launches
 
 func _ready() -> void:
 	connect("body_entered", _on_body_entered)
@@ -14,4 +14,4 @@ func _on_body_exited(body):
 		b = null
 func _process(delta: float) -> void:
 	if b != null:
-		b.velocity.y += -boost_strength
+		b.velocity.y = -boost_strength
