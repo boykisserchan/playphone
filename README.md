@@ -11,4 +11,10 @@ As of now, I've implemented the base game, this includes:
 - Sprites
 - More!
 
+## Controls
+
+- **Move Left**: Left Arrow or A key
+- **Move Right**: Right Arrow or D key
+- **Jump**: Space or Enter key
+
 yip yip huzzah :3
